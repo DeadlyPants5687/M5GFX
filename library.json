@@ -13,5 +13,10 @@
   "version": "0.2.30",
   "frameworks": ["arduino", "espidf", "*"],
   "platforms": ["espressif32", "native"],
-  "headers": "M5GFX.h"
+  "headers": "M5GFX.h",
+  "ESPHOME": {
+    "EXTRA_CMAKE": [
+      "target_link_libraries(${COMPONENT_LIB} PRIVATE idf::esp_lcd)"
+    ]
+  }
 }
